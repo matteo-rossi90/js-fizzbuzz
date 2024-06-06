@@ -20,13 +20,15 @@ let element;
 
 for(let i = 1; i <= 100; i++){
 
-    if(i % 3){
+    if(3 % i){
         element = `<div class="box">Fizz</div>`; //se è divisibile per 3 = Fizz
         container.innerHTML += element;
-    }else if(i % 5){
+        
+    }else if(5 % i){
         element = `<div class="box">Buzz</div>`; // se è divisibile per 5 = Buzz
         container.innerHTML += element;
-    } else if ((i % 3) && (i % 5)) { // se è divisibile per 3 e per 5 = Buzz
+
+    }else if ((3 % i) && (5 % i)) { // se è divisibile per 3 e per 5 = Buzz
         element = `<div class="box">FizzBuzz</div>`;
         container.innerHTML += element;
 
