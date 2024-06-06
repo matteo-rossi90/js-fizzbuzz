@@ -20,20 +20,20 @@ let element;
 
 for(let i = 1; i <= 100; i++){
 
-    if(3 % i){
-        element = `<div class="box">Fizz</div>`; //se è divisibile per 3 = Fizz
+    if((i % 3 === 0) && (i % 5 === 0)) {
+        element = `<div class="box box-fb">FizzBuzz</div>`; //se è divisibile per 3 e per 5 = FizzBuzz
         container.innerHTML += element;
         
-    }else if(5 % i){
-        element = `<div class="box">Buzz</div>`; // se è divisibile per 5 = Buzz
+    }else if(i % 3 === 0){
+        element = `<div class="box box-f">Fizz</div>`; // se è divisibile per 3 = Fizz
         container.innerHTML += element;
 
-    }else if ((3 % i) && (5 % i)) { // se è divisibile per 3 e per 5 = Buzz
-        element = `<div class="box">FizzBuzz</div>`;
+    }else if ((i % 5 === 0)) { // se è divisibile per 5 = Buzz
+        element = `<div class="box box-b">Buzz</div>`;
         container.innerHTML += element;
 
     }else{
-        element = `<div class="box">${i}</div>`;
+        element = `<div class="box box-num">${i}</div>`;
         container.innerHTML += element;
     }
 
