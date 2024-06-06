@@ -15,9 +15,24 @@ un fizz, un buzz o un fizzbuzz.*/
 
 //creare un'istruzione che consenta di generare numeri da 1 a 100 ciclicamente
 
-// creare condizioni all'interno di un ciclo
-    // se i divisibile per 3 = sostituire Fizz al numero
-    // se i è divisibile per 5 = sostituire Buzz al numero
-    // se i è divisibile per 5 e per 3 = sostituire FizzBuzz al numero;
-    // altrimenti genera il numero
-//stampare in log
+const container = document.querySelector(".container");
+let element;
+
+for(let i = 1; i <= 100; i++){
+
+    if(i % 3){
+        element = `<div class="box">Fizz</div>`; //se è divisibile per 3 = Fizz
+        container.innerHTML += element;
+    }else if(i % 5){
+        element = `<div class="box">Buzz</div>`; // se è divisibile per 5 = Buzz
+        container.innerHTML += element;
+    } else if ((i % 3) && (i % 5)) { // se è divisibile per 3 e per 5 = Buzz
+        element = `<div class="box">FizzBuzz</div>`;
+        container.innerHTML += element;
+
+    }else{
+        element = `<div class="box">${i}</div>`;
+        container.innerHTML += element;
+    }
+
+}
