@@ -16,24 +16,27 @@ un fizz, un buzz o un fizzbuzz.*/
 //creare un'istruzione che consenta di generare numeri da 1 a 100 ciclicamente
 
 const container = document.querySelector(".container");
-let element;
+let element = document.getElementById("dom");
 
 for(let i = 1; i <= 100; i++){
 
     if((i % 3 === 0) && (i % 5 === 0)) {
-        element = `<div class="box box-fb">FizzBuzz</div>`; //se è divisibile per 3 e per 5 = FizzBuzz
+
+        //se è divisibile per 3 e per 5 = FizzBuzz
+        
+        element = `<div class="box" style="background-color:#F0466F">FizzBuzz</div>`;
         container.innerHTML += element;
         
     }else if(i % 3 === 0){
-        element = `<div class="box box-f">Fizz</div>`; // se è divisibile per 3 = Fizz
+        element = `<div class="box" style="background-color:#0CD6A1">Fizz</div>`; // se è divisibile per 3 = Fizz
         container.innerHTML += element;
 
     }else if ((i % 5 === 0)) { // se è divisibile per 5 = Buzz
-        element = `<div class="box box-b">Buzz</div>`;
+        element = `<div class="box" style="background-color:#FFD166">Buzz</div>`;
         container.innerHTML += element;
 
     }else{
-        element = `<div class="box box-num">${i}</div>`;
+        element = `<div class="box" style="background-color:#1389B2">${i}</div>`;
         container.innerHTML += element;
     }
 
